@@ -1,0 +1,82 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header ."
+        "heroes heroes"
+        "footer .";
+    background: url('../images/bg-desktop.svg')center center no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    grid-template-areas: "header header"
+        "about about"
+        "footer .";
+    font-family: 'Poppins', sans-serif;
+    max-width: fit-content;
+    
+}
+
+/* Header */
+.header {
+    grid-area: header;
+    margin: 1rem;
+}
+.header .head img{
+    height: 40px;
+}
+
+
+
+/* About */
+.about {
+    grid-area: about;
+    height: 82vh;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+ /* .about .image img{
+    width: 100%;
+ } */
+
+
+
+
+.about .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .items h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+
+}
+
+@media(max-width:720px){
+    body{ background:url('../images/bg-mobile.svg') center center no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+    }
+    
+    .about{
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+    .header .head img{
+        height: 50px;
+    }
+}
+
+/* Footer */
+.footer {
+    grid-area: footer;
+
+}
